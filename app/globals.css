@@ -47,6 +47,20 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom semantic theme colors */
+    --color-bg: #0b1f0b;
+    --color-foreground: #fafafa;
+    --color-heading: #fffacd;
+    --color-subheading: #e0ffe0;
+    --color-accent: #b2ffb2;
+    --color-button-bg: #14532d;
+    --color-button-bg-hover: #166534;
+    --color-button-border: #166534;
+    --color-button-border-hover: #fde047;
+    --color-button-text: #fafafa;
+    --color-button-text-hover: #fffacd;
+    --color-icon: #fffacd;
+    --color-footer: #b2ffb2;
   }
   .dark {
     --background: 0 0% 3.9%;

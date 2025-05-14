@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { DiAndroid, DiWindows, DiUbuntu, DiGithubBadge } from "react-icons/di"
-import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react"
-import Link from "next/link"
+import { DiAndroid, DiWindows, DiUbuntu, DiGithubBadge } from "react-icons/di";
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
 
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   return (
-    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#0B1F0B] text-green-50">
+    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-[var(--color-bg)] text-[var(--color-foreground)]">
       {/* Magical forest mist effect */}
       <div
         className="pointer-events-none absolute inset-0 opacity-30"
@@ -41,78 +41,69 @@ export default function Home() {
       </div>
 
       <div className="container relative flex max-w-3xl flex-col items-center justify-center gap-8 px-4 text-center">
-
         <div className="space-y-2">
-          <h1 className="bg-gradient-to-r from-green-300 via-yellow-200/90 to-green-300 bg-clip-text text-4xl font-bold tracking-tighter text-transparent sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tighter text-[var(--color-heading)] sm:text-5xl">
             noql.net
           </h1>
-          <p className="text-xl text-green-400">Censorship Circumvention Tools and Resources</p>
+          <p className="text-xl text-[var(--color-subheading)]">
+            Censorship Circumvention Tools and Resources
+          </p>
         </div>
 
         {/* <p className="max-w-[600px] text-green-200/80 md:text-lg">From Years of Research & Development: Solving Open Internet Challenges in Heavily Censored Regions.</p> */}
 
         <div className="flex flex-col gap-4 items-center max-w-md w-full">
           <Link href="/apt-repository" className="w-full">
-            <Button
-              variant="outline"
-              className="w-full flex items-start gap-3 p-4 h-auto border-green-800/50 bg-green-900/30 text-green-400 backdrop-blur-sm transition-all hover:border-green-500 hover:bg-green-800/40 hover:text-green-200"
-            >
-              <DiUbuntu className="h-5 w-5 flex-shrink-0" />
+            <Button className="w-full flex items-start gap-3 p-4 h-auto border-[var(--color-button-border)] bg-[var(--color-button-bg)] text-[var(--color-button-text)] font-semibold hover:border-[var(--color-button-border-hover)] hover:bg-[var(--color-button-bg-hover)] hover:text-[var(--color-button-text-hover)] transition-all backdrop-blur-sm">
+              <DiUbuntu className="h-5 w-5 flex-shrink-0 text-[var(--color-icon)]" />
               <div className="flex flex-col items-start text-left flex-1 overflow-hidden">
-                <span className="font-medium">Debian/Ubuntu APT Repository</span>
-                <span className="text-xs text-green-400/70 break-words overflow-wrap-anywhere">
+                <span className="font-medium">
+                  Debian/Ubuntu APT Repository
+                </span>
+                <span className="text-xs text-[var(--color-subheading)] break-words overflow-wrap-anywhere">
                   Censorship circumvention tools for Debian and Ubuntu
                 </span>
               </div>
             </Button>
           </Link>
           <Link href="/fdroid-repository" className="w-full">
-          <Button
-              variant="outline"
-              className="w-full flex items-start gap-3 p-4 h-auto border-green-800/50 bg-green-900/30 text-green-400 backdrop-blur-sm transition-all hover:border-green-500 hover:bg-green-800/40 hover:text-green-200"
-            >
-            <DiAndroid className="h-5 w-5 flex-shrink-0" />
-            <div className="flex flex-col items-start text-left flex-1 overflow-hidden">
-              <span className="font-medium">Android F-droid Repository</span>
-              <span className="text-xs text-green-400/70 break-words overflow-wrap-anywhere">
-              Censorship circumvention apps for Android.
-              </span>
-            </div>
-          </Button>
+            <Button className="w-full flex items-start gap-3 p-4 h-auto border-[var(--color-button-border)] bg-[var(--color-button-bg)] text-[var(--color-button-text)] font-semibold hover:border-[var(--color-button-border-hover)] hover:bg-[var(--color-button-bg-hover)] hover:text-[var(--color-button-text-hover)] transition-all backdrop-blur-sm">
+              <DiAndroid className="h-5 w-5 flex-shrink-0 text-[var(--color-icon)]" />
+              <div className="flex flex-col items-start text-left flex-1 overflow-hidden">
+                <span className="font-medium">Android F-droid Repository</span>
+                <span className="text-xs text-[var(--color-subheading)] break-words overflow-wrap-anywhere">
+                  Censorship circumvention apps for Android.
+                </span>
+              </div>
+            </Button>
           </Link>
           <Link href="/scoop-repository" className="w-full">
-          <Button
-              variant="outline"
-              className="w-full flex items-start gap-3 p-4 h-auto border-green-800/50 bg-green-900/30 text-green-400 backdrop-blur-sm transition-all hover:border-green-500 hover:bg-green-800/40 hover:text-green-200"
-            >
-            <DiWindows className="h-5 w-5 flex-shrink-0" />
-            <div className="flex flex-col items-start text-left flex-1 overflow-hidden">
-              <span className="font-medium">Windows Scoop Repository</span>
-              <span className="text-xs text-green-400/70 break-words overflow-wrap-anywhere">
-              Censorship circumvention apps for Windows.
-              </span>
-            </div>
-          </Button>
+            <Button className="w-full flex items-start gap-3 p-4 h-auto border-[var(--color-button-border)] bg-[var(--color-button-bg)] text-[var(--color-button-text)] font-semibold hover:border-[var(--color-button-border-hover)] hover:bg-[var(--color-button-bg-hover)] hover:text-[var(--color-button-text-hover)] transition-all backdrop-blur-sm">
+              <DiWindows className="h-5 w-5 flex-shrink-0 text-[var(--color-icon)]" />
+              <div className="flex flex-col items-start text-left flex-1 overflow-hidden">
+                <span className="font-medium">Windows Scoop Repository</span>
+                <span className="text-xs text-[var(--color-subheading)] break-words overflow-wrap-anywhere">
+                  Censorship circumvention apps for Windows.
+                </span>
+              </div>
+            </Button>
           </Link>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4">
-        <Link href="https://github.com/noql-net" className="w-full">
-          <Button
-            variant="outline"
-            size="icon"
-            className="group border-green-800/50 bg-green-900/30 text-green-400 backdrop-blur-sm transition-all hover:border-green-500 hover:bg-green-800/40 hover:text-green-200"
-          >
-            <DiGithubBadge className="h-5 w-5 transition-transform group-hover:scale-110" />
-            <span className="sr-only">GitHub</span>
-          </Button>
-        </Link>
+          <Link href="https://github.com/noql-net" className="w-full">
+            <Button className="group border-[var(--color-button-border)] bg-[var(--color-button-bg)] text-[var(--color-button-text)] hover:border-[var(--color-button-border-hover)] hover:bg-[var(--color-button-bg-hover)] hover:text-[var(--color-button-text-hover)] transition-all backdrop-blur-sm">
+              <DiGithubBadge className="h-5 w-5 transition-transform group-hover:scale-110 text-[var(--color-icon)]" />
+              <span className="sr-only">GitHub</span>
+            </Button>
+          </Link>
         </div>
       </div>
 
-      <footer className="absolute bottom-4 text-sm text-green-500/60">
-        © {new Date().getFullYear()} Mark Pashmfouroush. Made for Iranians, useful for everyone.
+      <footer className="absolute bottom-4 text-sm text-[var(--color-footer)]">
+        © {new Date().getFullYear()} Mark Pashmfouroush. Made for Iranians,
+        useful for everyone.
       </footer>
     </div>
-  )
+  );
 }
