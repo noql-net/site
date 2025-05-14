@@ -97,6 +97,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4">
+        <Link href="https://github.com/noql-net" className="w-full">
           <Button
             variant="outline"
             size="icon"
@@ -105,6 +106,7 @@ export default function Home() {
             <DiGithubBadge className="h-5 w-5 transition-transform group-hover:scale-110" />
             <span className="sr-only">GitHub</span>
           </Button>
+        </Link>
         </div>
       </div>
 
