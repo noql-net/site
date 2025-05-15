@@ -10,6 +10,13 @@ import {
     FiDownloadCloud
 } from 'react-icons/fi';
 import { CopyButton } from '../../components/ui/copy-button';
+import type { Metadata } from 'next';
+import { siteName, defaultDescription } from '../layout';
+
+export const metadata: Metadata = {
+    title: `${siteName} | F-Droid Repository`,
+    description: defaultDescription
+};
 
 export default function FDroidRepositoryPage() {
     return (
