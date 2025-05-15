@@ -42,7 +42,13 @@ export default function Home() {
 
             <div className='container relative flex max-w-3xl flex-col items-center justify-center gap-8 px-4 text-center'>
                 <div className='space-y-2'>
-                    <img src='/logo.png' className='w-[400px] max-w-full mb-[20px]' alt='Logo' />
+                    <Link href='/'>
+                        <img
+                            src='/logo.png'
+                            className='w-[400px] max-w-full mb-[20px]'
+                            alt='Logo'
+                        />
+                    </Link>
                     <p className='text-xl text-green-400'>
                         Censorship Circumvention Tools and Resources
                     </p>
