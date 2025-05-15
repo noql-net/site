@@ -3,6 +3,13 @@ import Link from 'next/link';
 import { DiUbuntu, DiGithubBadge } from 'react-icons/di';
 import { FiDownload, FiRefreshCw, FiPlus, FiDownloadCloud } from 'react-icons/fi';
 import { CopyButton } from '../../components/ui/copy-button';
+import type { Metadata } from 'next';
+import { siteName, defaultDescription } from '../layout';
+
+export const metadata: Metadata = {
+    title: `${siteName} | APT Repository`,
+    description: defaultDescription
+};
 
 export default function APTRepositoryPage() {
     return (
