@@ -28,9 +28,7 @@ export default function FDroidRepositoryPage() {
             </div>
             <div className='container relative flex max-w-3xl flex-col items-center gap-8 text-center pb-16'>
                 <Link href='/' className='mb-10'>
-                    <h1 className='bg-gradient-to-r from-green-300 via-yellow-200/90 to-green-300 bg-clip-text text-4xl font-bold tracking-tighter text-transparent sm:text-3xl cursor-pointer'>
-                        noql.net
-                    </h1>
+                    <img src='/logo.png' className='w-[400px] max-w-full mb-[20px]' alt='Logo' />
                 </Link>
                 <div className='space-y-4'>
                     <div className='flex items-center justify-center gap-4'>
