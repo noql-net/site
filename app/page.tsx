@@ -116,8 +116,11 @@ export default function Home() {
             </div>
 
             <footer className='absolute bottom-4 text-sm text-green-500/60'>
-                © {new Date().getFullYear()} Mark Pashmfouroush. Made for Iranians, useful for
-                everyone.
+                © {new Date().getFullYear()}{' '}
+                <a href='https://markpash.me/' target='_blank' className='hover:underline'>
+                    Mark Pashmfouroush
+                </a>
+                . Made for Iranians, useful for everyone.
             </footer>
         </div>
     );
