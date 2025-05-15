@@ -16,6 +16,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode; params?: any }>) {
     return (
         <html lang='en'>
+            <head>
+                <link rel='icon' href='/favicon.ico' />
+            </head>
             <body>{children}</body>
         </html>
     );
