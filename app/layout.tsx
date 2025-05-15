@@ -6,7 +6,7 @@ export const defaultDescription = 'Censorship Circumvention Tools and Resources'
 export const siteName = 'Noql.net';
 
 export const metadata: Metadata = {
-    title: `${siteName} | Home`,
+    title: `${siteName} | ${defaultDescription}`,
     description: defaultDescription
 };
 
